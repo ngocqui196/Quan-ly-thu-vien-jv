@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChuDe {
@@ -38,12 +39,22 @@ public class ChuDe {
         this.saches = saches;
     }
 
-    @Override
-    public String toString() {
-        return "ChuDe{" +
-                "IdChuDe=" + IdChuDe +
-                ", tenChuDe='" + tenChuDe + '\'' +
-                ", saches=" + saches +
-                '}';
+
+    public String toString(ArrayList<Sach> sach) {
+        String value = "";
+        for (Sach s: sach) {
+            value = "Sach{" +
+                    "Idsach=" + s.getIdsach() +
+                    ", tenTacGia='" + s.getTenSach() + '\'' +
+                    ", giaSach=" + s.getGiaSach() +
+                    ", soLuongSach=" + s.getSoLuongSach() +
+                    ", IdchuDeSach='" + s.getIdchuDeSach() + '\'' +
+                    '}' +
+                    "ChuDe{" +
+                    "IdChuDe=" + IdChuDe +
+                    ", tenChuDe='" + tenChuDe + '\'' +
+                    '}';
+        }
+        return value;
     }
 }
