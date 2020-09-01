@@ -1,15 +1,17 @@
 public class Sach {
-    int Idsach;
-    String tenTacGia;
-    int giaSach;
-    int soLuongSach;
-    String IdchuDeSach;
+    private  int Idsach;
+    private String tenSach;
+    private int giaSach;
+    private int soLuongSach;
+    private int iDchuDeSach;
 
-    public Sach(int idsach, String tenTacGia, int giaSach, int soLuongSach) {
+    public Sach(int idsach, String tenSach, int giaSach, int soLuongSach, int idchuDeSach) {
         Idsach = idsach;
-        this.tenTacGia = tenTacGia;
+        this.tenSach = tenSach;
         this.giaSach = giaSach;
         this.soLuongSach = soLuongSach;
+        this.iDchuDeSach = idchuDeSach;
+
     }
 
     public int getIdsach() {
@@ -20,12 +22,12 @@ public class Sach {
         Idsach = idsach;
     }
 
-    public String getTenTacGia() {
-        return tenTacGia;
+    public String getTenSach() {
+        return tenSach;
     }
 
-    public void setTenTacGia(String tenTacGia) {
-        this.tenTacGia = tenTacGia;
+    public void setTenSach(String tenSach) {
+        this.tenSach = tenSach;
     }
 
     public int getGiaSach() {
@@ -44,18 +46,18 @@ public class Sach {
         this.soLuongSach = soLuongSach;
     }
 
-    public String getIdchuDeSach() {
-        return IdchuDeSach;
+    public int getIdchuDeSach() {
+        return iDchuDeSach;
     }
 
     @Override
     public String toString() {
         return "Sach{" +
                 "Idsach=" + Idsach +
-                ", tenTacGia='" + tenTacGia + '\'' +
+                ", tensach='" + tenSach + '\'' +
                 ", giaSach=" + giaSach +
                 ", soLuongSach=" + soLuongSach +
-                ", IdchuDeSach='" + IdchuDeSach + '\'' +
+                ", IdchuDeSach='" + iDchuDeSach + '\'' +
                 '}';
     }
 }
